@@ -1,3 +1,5 @@
-<h1>
-  {{title}}
-</h1>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+      <input name="first" ngModel required #first="ngModel">
+      <button [routerLink]="['/book', first.value]">Submit</button>
+    </form>
+<router-outlet></router-outlet>
